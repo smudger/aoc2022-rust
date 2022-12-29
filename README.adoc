@@ -10,16 +10,16 @@ The project may also contain a number of example inputs named sequentially start
 
 In addition, the https://github.com/smudger/aoc2022-rust/tree/main/runner[`runner`] directory contains a binary https://github.com/smudger/aoc2022-rust/blob/main/runner/src/bin/bench.rs[`bench.rs`] to benchmark the execution times for each of the solutions.
 
-[source,rust]
+[source,bash]
 ----
-// Switch to day 1, and run part 1
+# Switch to day 1, and run part 1
 cd day01
 cargo run --release --bin part1
 
-// or run part 2
+# or run part 2
 cargo run --release --bin part2
 
-// or benchmark every day
+# or benchmark every day
 cd ../runner
 cargo run --release --bin bench
 ----
