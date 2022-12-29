@@ -1,3 +1,24 @@
-# Advent of Code 2022 - Rust
+== Advent of Code 2022 - Rust
 
 My solutions to the https://adventofcode.com/2022[Advent of Code 2022]. Written in https://www.rust-lang.org[Rust].
+
+=== Running the solutions
+
+Each Rust project contains one +input.txt+ file and two project binaries +part1.rs+ and +part2.rs+. The +input.txt+ file contains the puzzle input for that day, and the binaries contain the solution to each part of the puzzle. Simply run the project with the desired binary to see the solution for that part of the problem appear.
+
+The project may also contain a number of example inputs named sequentially starting from +example01.txt+. These inputs are used for the tests found in +lib.rs+ and are not used to produce the actual solution.
+
+In addition, the https://github.com/smudger/aoc2022-rust/tree/main/runner[runner] directory contains a binary https://github.com/smudger/aoc2022-rust/blob/main/runner/src/bin/bench.rs[bench.rs] to benchmark the execution times for each of the solutions.
+
+[source,rust]
+# Switch to day 1, and run part 1
+cd day01
+cargo run --release --bin part1
+
+# or run part 2
+cargo run --release --bin part2
+
+# or benchmark every day
+cd ../runner
+cargo run --release --bin bench
+----
