@@ -1,3 +1,6 @@
+:repo: https://github.com/smudger/aoc2022-rust/blob/main
+:aoc: https://adventofcode.com/2022/day
+
 == Advent of Code 2022 - Rust
 
 My solutions to the https://adventofcode.com/2022[Advent of Code 2022]. Written in https://www.rust-lang.org[Rust].
@@ -20,7 +23,7 @@ cargo run --release --bin part2
 
 === Benchmarking
 
-The https://github.com/smudger/aoc2022-rust/tree/main/runner[`runner`] directory contains a binary https://github.com/smudger/aoc2022-rust/blob/main/runner/src/bin/bench.rs[`bench.rs`] to benchmark the execution times for each of the solutions.
+The {repo}/runner[`runner`] directory contains a binary {repo}/runner/src/bin/bench.rs[`bench.rs`] to benchmark the execution times for each of the solutions.
 
 [source,bash]
 ----
@@ -31,8 +34,6 @@ cargo run --release --bin bench
 
 You can find the results below.
 
-:aoc: https://adventofcode.com/2022/day
-:repo: https://github.com/smudger/aoc2022-rust/blob/main
 [format="csv"]
 [options="header"cols=",m,m"]
 |===========================
@@ -43,4 +44,10 @@ You can find the results below.
 
 === Inspiration
 
+The project structure was inspired by the Rust Advent of Code repos by https://github.com/timvisee/advent-of-code-2022[Tim Visée] and https://github.com/ChristopherBiscardi/advent-of-code[Chris Biscardi].
+
+The benchmarking implementation is inspired by https://github.com/timvisee/advent-of-code-2022[Tim Visée].
+
 === License
+
+This project is released under the GNU GPL-3.0 license. Check out the :repo:/LICENSE[LICENSE] file for more information.
