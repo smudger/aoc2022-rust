@@ -44,10 +44,10 @@ You can find the results below.
 
 === Inspiration
 
-The project structure was inspired by the Rust Advent of Code repos by https://github.com/timvisee/advent-of-code-2022[Tim Visée] and https://github.com/ChristopherBiscardi/advent-of-code[Chris Biscardi].
+The project structure is inspired by the Rust Advent of Code repos by https://github.com/timvisee/advent-of-code-2022[Tim Visée] and https://github.com/ChristopherBiscardi/advent-of-code[Chris Biscardi].
 
 The benchmarking implementation is inspired by https://github.com/timvisee/advent-of-code-2022[Tim Visée].
 
 === License
 
-This project is released under the GNU GPL-3.0 license. Check out the :repo:/LICENSE[LICENSE] file for more information.
+This project is released under the GNU GPL-3.0 license. Check out the {repo}/LICENSE[LICENSE] file for more information.
