@@ -1,3 +1,4 @@
+use day01::part1;
 fn main() {
-    println!("Hello, part 1!");
+    println!("{}", part1());
 }
