@@ -10,6 +10,7 @@ took = "0.1.2"
 
 # Days
 day01 = { path = "../day01" }
+csv = "1.1.6"
 # day02 = { path = "../day02" }
 # day03 = { path = "../day03" }
 # day04 = { path = "../day04" }

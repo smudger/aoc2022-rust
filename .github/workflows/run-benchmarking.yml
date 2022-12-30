@@ -11,6 +11,12 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
+      - name: Run benchmarking
+        run: |
+          cd ./runner
+          cargo build --release --verbose
+          cargo run --release --verbose --bin bench-ci
+          cd ..
       - name: Generate new README.adoc
         run: |
           cp ./.github/data/README.adoc ./README.adoc

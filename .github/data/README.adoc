@@ -32,7 +32,7 @@ cd runner
 cargo run --release --bin bench
 ----
 
-You can find the results below.
+The {repo}/runner/src/bin/bench-ci.rs[`bench-ci.rs`] binary is used on the CI pipeline to benchmark the execution times more objectively, though still only provides a rough estimation. You can find the results below.
 
 [format="csv"]
 [options="header"cols=",m,m"]
