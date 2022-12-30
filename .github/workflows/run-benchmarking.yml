@@ -14,7 +14,7 @@ jobs:
       - name: Generate new README.adoc
         run: |
           cp ./.github/data/README.adoc ./README.adoc
-          sed -i "" "s/include\:\:benchmark\.csv\[\]/$(sed -e 's/[\&/]/\\&/g' -e 's/$/\\n/' ./.github/data/benchmark.csv | tr -d '\n')/" ./README.adoc
+          sed -i "s/include\:\:benchmark\.csv\[\]/$(sed -e 's/[\&/]/\\&/g' -e 's/$/\\n/' ./.github/data/benchmark.csv | tr -d '\n')/" ./README.adoc
       - name: Commit new README.adoc
         run: |
           git config user.name github-actions
