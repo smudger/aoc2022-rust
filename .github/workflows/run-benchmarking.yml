@@ -26,5 +26,5 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add README.adoc
-          git commit -m "Updated README.adoc with new benchmark results"
+          git diff-index --quiet HEAD || git commit -m "Updated README.adoc with new benchmark results"
           git push
