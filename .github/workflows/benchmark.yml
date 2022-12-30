@@ -1,4 +1,4 @@
-name: Run Benchmarking
+name: Benchmark
 run-name: Running benchmarking and updating results in README.adoc 🚀
 on:
   push:
