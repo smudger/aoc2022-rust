@@ -12,8 +12,9 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - name: Generate new README.adoc
-        run: ./.github/scripts/generate_readme.sh
-        shell: bash
+        run: |
+          cp ./.github/data/README.adoc README.adoc
+          sed -i "" "s/include\:\:benchmark\.csv\[\]/$(sed -e 's/[\&/]/\\&/g' -e 's/$/\\n/' ./.github/data/benchmark.csv | tr -d '\n')/" ./README.adoc
       - name: Commit new README.adoc
         run: |
           git config user.name github-actions
