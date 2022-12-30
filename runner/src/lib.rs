@@ -1,54 +1,28 @@
-pub fn jobs() -> &'static [(fn() -> String, &'static str)] {
+use std::time::Duration;
+use took::Timer;
+
+pub fn jobs() -> &'static [(&'static str, fn() -> String, fn() -> String)] {
     &[
-        (day01::part1, "day01-1"),
-        (day01::part2, "day01-2"),
-        // (day02::part1, "day02-1"),
-        // (day02::part2, "day02-2"),
-        // (day03::part1, "day03-1"),
-        // (day03::part2, "day03-2"),
-        // (day04::part1, "day04-1"),
-        // (day04::part2, "day04-2"),
-        // (day05::part1, "day05-1"),
-        // (day05::part2, "day05-2"),
-        // (day06::part1, "day06-1"),
-        // (day06::part2, "day06-2"),
-        // (day07::part1, "day07-1"),
-        // (day07::part2, "day07-2"),
-        // (day08::part1, "day08-1"),
-        // (day08::part2, "day08-2"),
-        // (day09::part1, "day09-1"),
-        // (day09::part2, "day09-2"),
-        // (day10::part1, "day10-1"),
-        // (day10::part2, "day10-2"),
-        // (day11::part1, "day11-1"),
-        // (day11::part2, "day11-2"),
-        // (day12::part1, "day12-1"),
-        // (day12::part2, "day12-2"),
-        // (day13::part1, "day13-1"),
-        // (day13::part2, "day13-2"),
-        // (day14::part1, "day14-1"),
-        // (day14::part2, "day14-2"),
-        // (day15::part1, "day15-1"),
-        // (day15::part2, "day15-2"),
-        // (day16::part1, "day16-1"),
-        // (day16::part2, "day16-2"),
-        // (day17::part1, "day17-1"),
-        // (day17::part2, "day17-2"),
-        // (day18::part1, "day18-1"),
-        // (day18::part2, "day18-2"),
-        // (day19::part1, "day19-1"),
-        // (day19::part2, "day19-2"),
-        // (day20::part1, "day20-1"),
-        // (day20::part2, "day20-2"),
-        // (day21::part1, "day21-1"),
-        // (day21::part2, "day21-2"),
-        // (day22::part1, "day22-1"),
-        // (day22::part2, "day22-2"),
-        // (day23::part1, "day23-1"),
-        // (day23::part2, "day23-2"),
-        // (day24::part1, "day24-1"),
-        // (day24::part2, "day24-2"),
-        // (day25::part1, "day25-1"),
-        // (day25::part2, "day25-2"),
+        ("01", day01::part1, day01::part2),
+        // ("02", day02::part1, day02::part2),
+        // ("03", day03::part1, day03::part2),
     ]
+}
+
+pub fn times(runs: usize) -> Vec<(&'static str, Duration, Duration)> {
+    jobs()
+        .iter()
+        .map(|j| (j.0, benchmark(j.1, runs), benchmark(j.2, runs)))
+        .collect()
+}
+
+fn benchmark(solution: fn() -> String, runs: usize) -> Duration {
+    (0..runs)
+        .map(|_| {
+            let took = Timer::new();
+            solution();
+            took.took().into_std()
+        })
+        .min()
+        .unwrap()
 }
