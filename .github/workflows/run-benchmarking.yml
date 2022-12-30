@@ -1,0 +1,22 @@
+name: Run Benchmarking
+run-name: Running benchmarking and updating results in README.adoc 🚀
+on:
+  push:
+    branches: [$default-branch]
+
+jobs:
+  Run-Benchmarking:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Generate new README.adoc
+        run: ./.github/scripts/generate_readme.sh
+        shell: bash
+      - name: Commit new README.adoc
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add README.adoc
+          git commit -m "Updated README.adoc with new benchmark results"
+          git push
