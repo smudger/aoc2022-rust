@@ -2,7 +2,6 @@
 :aoc: https://adventofcode.com/2022/day
 
 == :christmas_tree: Advent of Code 2022 - Rust
-image::https://github.com/smudger/aoc2022-rust/actions/workflows/benchmark.yml/badge.svg["https://github.com/smudger/aoc2022-rust/actions/workflows/benchmark.yml"]
 
 My solutions to the https://adventofcode.com/2022[Advent of Code 2022]. Written in https://www.rust-lang.org[Rust].
 
@@ -23,6 +22,8 @@ cargo run --release --bin part2
 ----
 
 === :trophy: Benchmarking
+
+image::https://github.com/smudger/aoc2022-rust/actions/workflows/benchmark.yml/badge.svg["https://github.com/smudger/aoc2022-rust/actions/workflows/benchmark.yml"]
 
 The {repo}/runner[`runner`] directory contains a binary {repo}/runner/src/bin/bench.rs[`bench.rs`] to benchmark the execution times for each of the solutions.
 
