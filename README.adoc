@@ -2,6 +2,7 @@
 :aoc: https://adventofcode.com/2022/day
 
 == :christmas_tree: Advent of Code 2022 - Rust
+image::https://github.com/smudger/aoc2022-rust/actions/workflows/benchmark.yml/badge.svg[link="https://github.com/smudger/aoc2022-rust/actions/workflows/benchmark.yml", title="Benchmark"]
 
 My solutions to the https://adventofcode.com/2022[Advent of Code 2022]. Written in https://www.rust-lang.org[Rust].
 
