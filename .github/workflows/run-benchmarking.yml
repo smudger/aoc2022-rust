@@ -2,7 +2,8 @@ name: Run Benchmarking
 run-name: Running benchmarking and updating results in README.adoc 🚀
 on:
   push:
-    branches: [$default-branch]
+    branches:
+      - main
 
 jobs:
   Run-Benchmarking:
